@@ -218,8 +218,9 @@ from apiverve_disposablephonenumberchecker.apiClient import DisposablephoneAPICl
 
 api = DisposablephoneAPIClient("[YOUR_API_KEY]")
 
+query = { "phone": "+12085813945" }
+
 try:
-    query = { "phone": "+12085813945" }
     result = api.execute(query)
     print(result)
 finally:
