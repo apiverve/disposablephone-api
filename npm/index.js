@@ -30,7 +30,7 @@ class disposablephoneWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/disposablephone';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"phone":{"type":"string","required":true}};
+        this.validationRules = {"phone":{"type":"string","required":true,"format":"phone"}};
     }
 
     /**
