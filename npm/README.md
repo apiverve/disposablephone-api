@@ -7,7 +7,7 @@ Disposable Phone Number Checker is an API that checks whether a given phone numb
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 [![npm version](https://img.shields.io/npm/v/@apiverve/disposablephone.svg)](https://www.npmjs.com/package/@apiverve/disposablephone)
 
-This is a Javascript Wrapper for the [Disposable Phone Number Checker API](https://apiverve.com/marketplace/disposablephone?utm_source=npm&utm_medium=readme)
+This is a Javascript Wrapper for the [Disposable Phone Number Checker API](https://disposablephone.apiverve.com?utm_source=npm&utm_medium=readme)
 
 ---
 
