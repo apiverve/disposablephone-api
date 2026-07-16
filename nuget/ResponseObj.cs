@@ -25,6 +25,9 @@ namespace APIVerve.API.DisposablePhoneNumberChecker
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,9 +36,21 @@ namespace APIVerve.API.DisposablePhoneNumberChecker
         public string Phone { get; set; }
 
         [JsonProperty("isDisposable")]
-        public bool IsDisposable { get; set; }
+        public bool? IsDisposable { get; set; }
 
         [JsonProperty("firstSeen")]
-        public DateTimeOffset FirstSeen { get; set; }
+        public DateTimeOffset? FirstSeen { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
