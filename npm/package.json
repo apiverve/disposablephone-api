@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/disposablephone",
-  "version": "1.2.0",
-  "description": "Disposable Phone Number Checker is an API that checks whether a given phone number is a known disposable or temporary number. Useful for fraud prevention, user verification, and security.",
+  "version": "1.2.2",
+  "description": "Disposable Phone Number Checker flags temporary and burner phone numbers supplied in E.164 format. Pass any number to check whether it is disposable and view the date it was first seen on temporary SMS lists.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "disposable phone", "temporary phone", "burner phone", "sms verification", "phone fraud"
+    "disposable phone number api", "phone fraud api", "burner phone check", "temporary phone number detection", "phone number spam detection"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/disposablephone-api/issues"
   },
-  "homepage": "https://disposablephone.apiverve.com?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/disposablephone?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
