@@ -2,9 +2,9 @@ openapi: 3.0.4
 info:
   title: Disposable Phone Number Checker
   description: >-
-    Disposable Phone Number Checker is an API that checks whether a given phone
-    number is a known disposable or temporary number. Useful for fraud
-    prevention, user verification, and security.
+    Disposable Phone Number Checker flags temporary and burner phone numbers
+    supplied in E.164 format. Pass any number to check whether it is disposable
+    and view the date it was first seen on temporary SMS lists.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/disposablephone:
     get:
-      summary: Check if Phone Number is Disposable
+      summary: Disposable Phone Number Checker
       description: >-
         Checks whether a given phone number is a known disposable or temporary
         number from SMS receiving services.
