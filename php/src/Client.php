@@ -19,7 +19,7 @@ use APIVerve\Disposablephone\Exceptions\ValidationException;
  * print_r($response);
  * ```
  *
- * @see https://disposablephone.apiverve.com?utm_source=php&utm_medium=readme
+ * @see https://apiverve.com/marketplace/disposablephone?utm_source=php&utm_medium=referral&utm_content=readme
  */
 class Client
 {

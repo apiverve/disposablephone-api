@@ -1,6 +1,6 @@
 # Disposable Phone Number Checker API - PHP Package
 
-Disposable Phone Number Checker is an API that checks whether a given phone number is a known disposable or temporary number. Useful for fraud prevention, user verification, and security.
+Disposable Phone Number Checker flags temporary and burner phone numbers supplied in E.164 format. Pass any number to check whether it is disposable and view the date it was first seen on temporary SMS lists.
 
 ## Installation
 
@@ -83,11 +83,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/disposablephone?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/disposablephone?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://disposablephone.apiverve.com?utm_source=php&utm_medium=readme](https://disposablephone.apiverve.com?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/disposablephone?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/disposablephone?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
