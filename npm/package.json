@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/disposablephone",
-  "version": "1.2.2",
-  "description": "Disposable Phone Number Checker flags temporary and burner phone numbers supplied in E.164 format. Pass any number to check whether it is disposable and view the date it was first seen on temporary SMS lists.",
+  "version": "1.2.3",
+  "description": "Disposable Phone Number Checker is a phone fraud API that flags temporary, burner and virtual phone numbers published on SMS-receiving sites. Pass a number in E.164 format to check whether it is disposable and see the date it was first seen on those lists.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
