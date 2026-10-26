@@ -46,10 +46,10 @@ final _formatPatterns = {
 
 /// Disposable Phone Number Checker API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/disposablephone?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/disposablephone?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
-/// * [phone] (required) - The phone number to check in E.164 format (e.g., +12085813945)
+/// * [phone] (required) - The phone number to check in E.164 format (e.g., +12085813945) [format: phone]
 class DisposablephoneClient {
   final String apiKey;
   final String baseUrl;
@@ -57,7 +57,7 @@ class DisposablephoneClient {
 
   /// Validation rules for parameters.
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
-    'phone': ValidationRule(type: 'string', required: true),
+    'phone': ValidationRule(type: 'string', required: true, format: 'phone'),
   };
 
   DisposablephoneClient(this.apiKey, {

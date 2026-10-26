@@ -1,11 +1,11 @@
 # Disposable Phone Number Checker API - Dart/Flutter Client
 
-Disposable Phone Number Checker is an API that checks whether a given phone number is a known disposable or temporary number. Useful for fraud prevention, user verification, and security.
+Disposable Phone Number Checker is a phone fraud API that flags temporary, burner and virtual phone numbers published on SMS-receiving sites. Pass a number in E.164 format to check whether it is disposable and see the date it was first seen on those lists.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_disposablephone.svg)](https://pub.dev/packages/apiverve_disposablephone)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the Dart/Flutter client for the [Disposable Phone Number Checker API](https://apiverve.com/marketplace/disposablephone?utm_source=dart&utm_medium=readme).
+This is the Dart/Flutter client for the [Disposable Phone Number Checker API](https://apiverve.com/marketplace/disposablephone?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_disposablephone: ^1.1.14
+  apiverve_disposablephone: ^1.2.3
 ```
 
 Then run:
@@ -61,12 +61,12 @@ void main() async {
 
 ## API Reference
 
-- **API Home:** [Disposable Phone Number Checker API](https://apiverve.com/marketplace/disposablephone?utm_source=dart&utm_medium=readme)
-- **Documentation:** [docs.apiverve.com/ref/disposablephone](https://docs.apiverve.com/ref/disposablephone?utm_source=dart&utm_medium=readme)
+- **API Home:** [Disposable Phone Number Checker API](https://apiverve.com/marketplace/disposablephone?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/disposablephone](https://docs.apiverve.com/ref/disposablephone?utm_source=dart&utm_medium=referral&utm_content=readme)
 
 ## Authentication
 
-All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=readme).
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## License
 
@@ -74,4 +74,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=readme)
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)
