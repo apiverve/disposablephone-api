@@ -1,6 +1,6 @@
 # [Disposable Phone Number Checker API](https://apiverve.com/marketplace/disposablephone?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Disposable Phone Number Checker flags temporary and burner phone numbers supplied in E.164 format. Pass any number to check whether it is disposable and view the date it was first seen on temporary SMS lists.
+Disposable Phone Number Checker is a phone fraud API that flags temporary, burner and virtual phone numbers published on SMS-receiving sites. Pass a number in E.164 format to check whether it is disposable and see the date it was first seen on those lists.
 
 The Disposable Phone Number Checker API provides a simple, reliable way to integrate disposable phone number checker functionality into your applications. Built for developers who need production-ready disposable phone number checker capabilities without the complexity of building from scratch.
 
