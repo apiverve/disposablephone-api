@@ -59,28 +59,37 @@ class DisposablephoneData {
   String? phone;
   bool? isDisposable;
   String? firstSeen;
+  num? listedInRange;
+  bool? isRiskyRange;
 
   DisposablephoneData({
     this.phone,
     this.isDisposable,
     this.firstSeen,
+    this.listedInRange,
+    this.isRiskyRange,
   });
 
   factory DisposablephoneData.fromJson(Map<String, dynamic> json) => DisposablephoneData(
       phone: json['phone'],
       isDisposable: json['isDisposable'],
       firstSeen: json['firstSeen'],
+      listedInRange: json['listedInRange'],
+      isRiskyRange: json['isRiskyRange'],
     );
 }
 
 class DisposablephoneRequest {
   String phone;
+  String? country;
 
   DisposablephoneRequest({
     required this.phone,
+    this.country,
   });
 
   Map<String, dynamic> toJson() => {
       'phone': phone,
+      if (country != null) 'country': country,
     };
 }

@@ -49,7 +49,8 @@ final _formatPatterns = {
 /// For more information, visit: https://apiverve.com/marketplace/disposablephone?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
-/// * [phone] (required) - The phone number to check in E.164 format (e.g., +12085813945) [format: phone]
+/// * [phone] (required) - The phone number to check, in E.164 format (e.g., +12085813945), or in national format together with country [format: phone]
+/// * [country] - Two-letter ISO country code for a number given in national format (e.g., GB for 07700 900123). Not needed for E.164 numbers
 class DisposablephoneClient {
   final String apiKey;
   final String baseUrl;
@@ -58,6 +59,7 @@ class DisposablephoneClient {
   /// Validation rules for parameters.
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
     'phone': ValidationRule(type: 'string', required: true, format: 'phone'),
+    'country': ValidationRule(type: 'string', required: false),
   };
 
   DisposablephoneClient(this.apiKey, {

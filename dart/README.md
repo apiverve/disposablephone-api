@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_disposablephone: ^1.2.3
+  apiverve_disposablephone: ^1.2.4
 ```
 
 Then run:
@@ -34,7 +34,8 @@ void main() async {
 
   try {
     final response = await client.execute({
-      'phone': '+12085813945'
+      'phone': '+12085813945',
+      'country': 'US'
     });
 
     print('Status: ${response.status}');
@@ -54,7 +55,9 @@ void main() async {
   "data": {
     "phone": "+12085813945",
     "isDisposable": true,
-    "firstSeen": "2024-01-30"
+    "firstSeen": "2024-01-30",
+    "listedInRange": 12,
+    "isRiskyRange": true
   }
 }
 ```
