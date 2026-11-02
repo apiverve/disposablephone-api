@@ -15,7 +15,7 @@ use APIVerve\Disposablephone\Exceptions\ValidationException;
  * @example Basic usage
  * ```php
  * $client = new Client('your_api_key');
- * $response = $client->execute(['phone' => '+12085813945']);
+ * $response = $client->execute(['phone' => '+12085813945', 'country' => 'US']);
  * print_r($response);
  * ```
  *
@@ -34,7 +34,8 @@ class Client
      * Validation rules for parameters
      */
     private const VALIDATION_RULES = [
-        'phone' => ['type' => 'string', 'required' => true, 'format' => 'phone']
+        'phone' => ['type' => 'string', 'required' => true, 'format' => 'phone'],
+        'country' => ['type' => 'string', 'required' => false]
     ];
 
     /**

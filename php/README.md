@@ -27,7 +27,10 @@ use APIVerve\Disposablephone\Client;
 $client = new Client('YOUR_API_KEY');
 
 // Make a request
-$response = $client->execute(['phone' => '+12085813945']);
+$response = $client->execute([
+    'phone' => '+12085813945',
+    'country' => 'US'
+]);
 
 // Print the response
 print_r($response);
@@ -42,7 +45,7 @@ use APIVerve\Disposablephone\Exceptions\APIException;
 use APIVerve\Disposablephone\Exceptions\ValidationException;
 
 try {
-    $response = $client->execute(['phone' => '+12085813945']);
+    $response = $client->execute(['phone' => '+12085813945', 'country' => 'US']);
     print_r($response['data']);
 } catch (ValidationException $e) {
     echo "Validation error: " . implode(', ', $e->getErrors());
@@ -71,7 +74,9 @@ $client = new Client(
   "data": {
     "phone": "+12085813945",
     "isDisposable": true,
-    "firstSeen": "2024-01-30"
+    "firstSeen": "2024-01-30",
+    "listedInRange": 12,
+    "isRiskyRange": true
   }
 }
 ```
