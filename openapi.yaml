@@ -31,8 +31,19 @@ paths:
           schema:
             type: string
           required: true
-          description: The phone number to check in E.164 format (e.g., +12085813945)
+          description: >-
+            The phone number to check, in E.164 format (e.g., +12085813945), or
+            in national format together with country
           example: '+12085813945'
+        - name: country
+          in: query
+          schema:
+            type: string
+          required: false
+          description: >-
+            Two-letter ISO country code for a number given in national format
+            (e.g., GB for 07700 900123). Not needed for E.164 numbers
+          example: US
       responses:
         '200':
           description: Successful Response
@@ -57,6 +68,8 @@ paths:
                   phone: '+12085813945'
                   isDisposable: true
                   firstSeen: '2024-01-30'
+                  listedInRange: 12
+                  isRiskyRange: true
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':

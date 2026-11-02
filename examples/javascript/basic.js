@@ -15,7 +15,8 @@ async function callDisposablePhoneNumberCheckerAPI() {
   try {
     // Query parameters
     const params &#x3D; new URLSearchParams({
-            phone: &#x27;+12085813945&#x27;
+            phone: &#x27;+12085813945&#x27;,
+            country: &#x27;US&#x27;
         });
 
     const response = await fetch(`${API_URL}?${params}`, {

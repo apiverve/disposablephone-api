@@ -18,7 +18,7 @@ def call_disposablephone_api():
     """
     try:
         # Query parameters
-        params &#x3D; {&#x27;phone&#x27;: &#x27;+12085813945&#x27;}
+        params &#x3D; {&#x27;phone&#x27;: &#x27;+12085813945&#x27;, &#x27;country&#x27;: &#x27;US&#x27;}
 
         headers = {
             'x-api-key': API_KEY

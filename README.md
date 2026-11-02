@@ -31,7 +31,8 @@ The Disposable Phone Number Checker API provides a simple, reliable way to integ
 async function callDisposablePhoneNumberCheckerAPI() {
     try {
         const params = new URLSearchParams({
-            phone: '+12085813945'
+            phone: '+12085813945',
+            country: 'US'
         });
 
         const response = await fetch(`https://api.apiverve.com/v1/disposablephone?${params}`, {
@@ -54,7 +55,7 @@ callDisposablePhoneNumberCheckerAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/disposablephone?phone=%2B12085813945" \
+curl -X GET "https://api.apiverve.com/v1/disposablephone?phone=%2B12085813945&country=US" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -213,7 +214,9 @@ A real response from the Disposable Phone Number Checker API:
   "data": {
     "phone": "+12085813945",
     "isDisposable": true,
-    "firstSeen": "2024-01-30"
+    "firstSeen": "2024-01-30",
+    "listedInRange": 12,
+    "isRiskyRange": true
   }
 }
 ```
