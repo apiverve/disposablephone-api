@@ -25,9 +25,11 @@ declare module '@apiverve/disposablephone' {
 
 
   interface DisposablePhoneNumberCheckerData {
-      phone:        null | string;
-      isDisposable: boolean | null;
-      firstSeen:    Date | null;
+      phone:         null | string;
+      isDisposable:  boolean | null;
+      firstSeen:     Date | null;
+      listedInRange: number | null;
+      isRiskyRange:  boolean | null;
   }
 
   export default class disposablephoneWrapper {

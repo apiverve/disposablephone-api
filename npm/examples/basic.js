@@ -15,7 +15,8 @@ const api = new disposablephoneAPI({
 
 // Example query
 var query = {
-  phone: "+12085813945"
+  phone: "+12085813945",
+  country: "US"
 };
 
 // Make the API request using callback
