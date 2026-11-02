@@ -10,7 +10,7 @@ module APIVerve
     #
     # @example Basic usage
     #   client = APIVerve::Disposablephone::Client.new(api_key: "your_api_key")
-    #   response = client.execute({ phone: "+12085813945" })
+    #   response = client.execute({ phone: "+12085813945", country: "US" })
     #   puts response
     #
     # @see https://apiverve.com/marketplace/disposablephone?utm_source=ruby&utm_medium=referral&utm_content=readme
@@ -19,7 +19,7 @@ module APIVerve
       DEFAULT_TIMEOUT = 30
 
       # Validation rules for parameters
-      VALIDATION_RULES = { 'phone' => { type: 'string', required: true, format: 'phone' } }
+      VALIDATION_RULES = { 'phone' => { type: 'string', required: true, format: 'phone' }, 'country' => { type: 'string', required: false } }
 
       # Format validation patterns
       FORMAT_PATTERNS = {

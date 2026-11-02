@@ -35,7 +35,10 @@ require 'apiverve_disposablephone'
 client = APIVerve::Disposablephone::Client.new(api_key: "YOUR_API_KEY")
 
 # Make a request
-response = client.execute({ phone: "+12085813945" })
+response = client.execute({
+  phone: "+12085813945",
+  country: "US"
+})
 
 # Print the response
 puts response
@@ -46,7 +49,7 @@ puts response
 
 ```ruby
 begin
-  response = client.execute({ phone: "+12085813945" })
+  response = client.execute({ phone: "+12085813945", country: "US" })
   puts response["data"]
 rescue APIVerve::Disposablephone::ValidationError => e
   puts "Validation error: #{e.errors.join(', ')}"
@@ -75,7 +78,9 @@ client = APIVerve::Disposablephone::Client.new(
   "data": {
     "phone": "+12085813945",
     "isDisposable": true,
-    "firstSeen": "2024-01-30"
+    "firstSeen": "2024-01-30",
+    "listedInRange": 12,
+    "isRiskyRange": true
   }
 }
 ```
