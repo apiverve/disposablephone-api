@@ -24,7 +24,8 @@ class ValidationError(DisposablephoneAPIClientError):
 class DisposablephoneAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
-        "phone": {"type": "string", "required": True, "format": "phone"}
+        "phone": {"type": "string", "required": True, "format": "phone"},
+        "country": {"type": "string", "required": False}
     }
 
     # Format validation patterns

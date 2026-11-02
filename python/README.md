@@ -1,7 +1,7 @@
 Disposable Phone Number Checker API
 ============
 
-Disposable Phone Number Checker flags temporary and burner phone numbers supplied in E.164 format. Pass any number to check whether it is disposable and view the date it was first seen on temporary SMS lists.
+Disposable Phone Number Checker is a phone fraud API that flags temporary, burner and virtual phone numbers published on SMS-receiving sites. Pass a number in E.164 format to check whether it is disposable and see the date it was first seen on those lists.
 
 
 [![PyPI version](https://img.shields.io/pypi/v/apiverve-disposablephonenumberchecker.svg)](https://pypi.org/project/apiverve-disposablephonenumberchecker/)
@@ -43,7 +43,10 @@ from apiverve_disposablephonenumberchecker.apiClient import DisposablephoneAPICl
 # Initialize the client with your APIVerve API key
 api = DisposablephoneAPIClient("[YOUR_API_KEY]")
 
-query = { "phone": "+12085813945" }
+query = {
+    "phone": "+12085813945",
+    "country": "US"
+}
 
 try:
     # Make the API call
@@ -81,7 +84,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "phone": "+12085813945" }
+query = {
+    "phone": "+12085813945",
+    "country": "US"
+}
 ```
 
 ###### Simple Request
@@ -103,7 +109,9 @@ print(result)
   "data": {
     "phone": "+12085813945",
     "isDisposable": true,
-    "firstSeen": "2024-01-30"
+    "firstSeen": "2024-01-30",
+    "listedInRange": 12,
+    "isRiskyRange": true
   }
 }
 ```
@@ -121,7 +129,10 @@ from apiverve_disposablephonenumberchecker.apiClient import DisposablephoneAPICl
 
 api = DisposablephoneAPIClient("[YOUR_API_KEY]")
 
-query = { "phone": "+12085813945" }
+query = {
+    "phone": "+12085813945",
+    "country": "US"
+}
 
 try:
     result = api.execute(query)
@@ -142,7 +153,10 @@ from apiverve_disposablephonenumberchecker.apiClient import DisposablephoneAPICl
 
 api = DisposablephoneAPIClient("[YOUR_API_KEY]")
 
-query = { "phone": "+12085813945" }
+query = {
+    "phone": "+12085813945",
+    "country": "US"
+}
 
 try:
     result = api.execute(query)
@@ -176,7 +190,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_disposablephonenumberchecker.apiClient import DisposablephoneAPIClient, DisposablephoneAPIClientError
 
-query = { "phone": "+12085813945" }
+query = {
+    "phone": "+12085813945",
+    "country": "US"
+}
 
 # Using context manager ensures proper cleanup
 with DisposablephoneAPIClient("[YOUR_API_KEY]") as api:
@@ -202,7 +219,10 @@ from apiverve_disposablephonenumberchecker.apiClient import DisposablephoneAPICl
 # Enable debug mode
 api = DisposablephoneAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "phone": "+12085813945" }
+query = {
+    "phone": "+12085813945",
+    "country": "US"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -217,7 +237,10 @@ from apiverve_disposablephonenumberchecker.apiClient import DisposablephoneAPICl
 
 api = DisposablephoneAPIClient("[YOUR_API_KEY]")
 
-query = { "phone": "+12085813945" }
+query = {
+    "phone": "+12085813945",
+    "country": "US"
+}
 
 try:
     result = api.execute(query)
