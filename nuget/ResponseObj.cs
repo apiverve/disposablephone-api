@@ -40,6 +40,12 @@ namespace APIVerve.API.DisposablePhoneNumberChecker
 
         [JsonProperty("firstSeen")]
         public DateTimeOffset? FirstSeen { get; set; }
+
+        [JsonProperty("listedInRange")]
+        public long? ListedInRange { get; set; }
+
+        [JsonProperty("isRiskyRange")]
+        public bool? IsRiskyRange { get; set; }
     }
 
     public partial class Premium

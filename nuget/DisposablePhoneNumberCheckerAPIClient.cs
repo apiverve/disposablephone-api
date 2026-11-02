@@ -67,7 +67,8 @@ namespace APIVerve.API.DisposablePhoneNumberChecker
         /// <summary>Validation rules for parameters</summary>
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
-            { "phone", new ValidationRule { Type = "string", Required = true, Format = "phone" } }
+            { "phone", new ValidationRule { Type = "string", Required = true, Format = "phone" } },
+            { "country", new ValidationRule { Type = "string", Required = false } }
         };
 
         /// <summary>Format validation patterns</summary>

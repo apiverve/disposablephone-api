@@ -60,7 +60,8 @@ class Program
         var apiClient = new DisposablePhoneNumberCheckerAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new DisposablePhoneNumberCheckerQueryOptions {
-            Phone = "+12085813945"
+            Phone = "+12085813945",
+            Country = "US"
         };
 
         // Make the API call
@@ -124,7 +125,8 @@ public class Example
         var apiClient = new DisposablePhoneNumberCheckerAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new DisposablePhoneNumberCheckerQueryOptions {
-            Phone = "+12085813945"
+            Phone = "+12085813945",
+            Country = "US"
         };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
@@ -156,7 +158,8 @@ public class Example
         var apiClient = new DisposablePhoneNumberCheckerAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new DisposablePhoneNumberCheckerQueryOptions {
-            Phone = "+12085813945"
+            Phone = "+12085813945",
+            Country = "US"
         };
 
         var response = apiClient.Execute(queryOptions);
@@ -193,7 +196,8 @@ public class Example
         var apiClient = new DisposablePhoneNumberCheckerAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new DisposablePhoneNumberCheckerQueryOptions {
-            Phone = "+12085813945"
+            Phone = "+12085813945",
+            Country = "US"
         };
 
         try
@@ -249,7 +253,8 @@ public class Example
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
         var queryOptions = new DisposablePhoneNumberCheckerQueryOptions {
-            Phone = "+12085813945"
+            Phone = "+12085813945",
+            Country = "US"
         };
 
         try
@@ -290,7 +295,8 @@ apiClient.AddCustomHeader("X-Custom-Header", "custom-value");
 apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
 var queryOptions = new DisposablePhoneNumberCheckerQueryOptions {
-    Phone = "+12085813945"
+    Phone = "+12085813945",
+    Country = "US"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -316,7 +322,8 @@ apiClient.SetLogger(message =>
 });
 
 var queryOptions = new DisposablePhoneNumberCheckerQueryOptions {
-    Phone = "+12085813945"
+    Phone = "+12085813945",
+    Country = "US"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -334,7 +341,8 @@ apiClient.SetMaxRetries(3);           // Retry up to 3 times (default: 0, max: 3
 apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (default: 1000ms)
 
 var queryOptions = new DisposablePhoneNumberCheckerQueryOptions {
-    Phone = "+12085813945"
+    Phone = "+12085813945",
+    Country = "US"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -346,7 +354,8 @@ The API client implements `IDisposable` for proper resource cleanup:
 
 ```csharp
 var queryOptions = new DisposablePhoneNumberCheckerQueryOptions {
-    Phone = "+12085813945"
+    Phone = "+12085813945",
+    Country = "US"
 };
 
 using (var apiClient = new DisposablePhoneNumberCheckerAPIClient("[YOUR_API_KEY]"))
@@ -368,7 +377,9 @@ using (var apiClient = new DisposablePhoneNumberCheckerAPIClient("[YOUR_API_KEY]
   "data": {
     "phone": "+12085813945",
     "isDisposable": true,
-    "firstSeen": "2024-01-30"
+    "firstSeen": "2024-01-30",
+    "listedInRange": 12,
+    "isRiskyRange": true
   }
 }
 ```

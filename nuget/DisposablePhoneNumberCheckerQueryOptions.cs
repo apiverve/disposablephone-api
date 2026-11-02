@@ -11,9 +11,15 @@ namespace APIVerve.API.DisposablePhoneNumberChecker
     public class DisposablePhoneNumberCheckerQueryOptions
     {
         /// <summary>
-        /// The phone number to check in E.164 format (e.g., +12085813945)
+        /// The phone number to check, in E.164 format (e.g., +12085813945), or in national format together with country
         /// </summary>
         [JsonProperty("phone")]
         public string Phone { get; set; }
+
+        /// <summary>
+        /// Two-letter ISO country code for a number given in national format (e.g., GB for 07700 900123). Not needed for E.164 numbers
+        /// </summary>
+        [JsonProperty("country")]
+        public string Country { get; set; }
     }
 }
